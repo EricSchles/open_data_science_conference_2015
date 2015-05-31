@@ -262,6 +262,10 @@ This tool is in alpha and I'm adding new features regularly.  The next step here
 * [This scikit learn example](http://scikit-learn.org/0.11/auto_examples/document_classification_20newsgroups.html)
 * [This stack overflow answer](http://stackoverflow.com/questions/19484499/text-mining-with-svm-classifier)
 
+##Analyzing Leads and Collecting Information for Prosecution
+
+Most traffickers also have their own personal websites.  Once we have enough personal information from scraping backpage, we can typically start to find these domains.
+
 ##Scraping other websites
 
 Ad sites like backpage all function more or less the same way - they post a ton of ads per day and there are a lot of pages, so you need specialized scrapers.  Fortunately the ads are all very regular, so you only need to write those scrapers once.
@@ -508,6 +512,20 @@ for recognizer in recog.keys():
 
 As the classifiers show, the predict method returns a simple distance metric where 0.0 means the faces are the same, and anything larger implies difference.  Typically within 50 is a pretty good match.  Of course, the different recognizers will yield different ranges of accuracy and correctness.  Please do tune accordingly.
 
-##Why all this data
+##Making Sense of the Data for a Jury
 
-Once the data is collected it is compared against internal data sets and other records which are used to map the life of the trafficker - looking for anything to convict them of a crime.  Proving trafficking is extremely hard - this is because often times the victims will recant their testimoney, several times.  This is sometimes due to fear of further abuse, or even death.
+There is a great challenge in explaining all of this information to non-technical folks.  Often data visualization, high level statistics like:
+
+From 2011-2014 Person-X posted 211 ads and beat girls in six of these ads, as evidenced by these police reports.
+
+When going to trial, lawyers will often question the authenticity of our data, which is why all websites are hashed.  Another important tool is being able to analyze pictures forensically, for exif data and stegnographic information.
+
+Since this is a data science conference I'll simply [link to the github](https://github.com/EricSchles/picture_forensics), which you can check out if you are interested.
+
+##Questions?
+
+Thanks!
+
+Contact info:
+
+eric.schles@syncano.com
